@@ -1,0 +1,89 @@
+<ai-sidenav [element_array]="element_array">
+</ai-sidenav>
+
+<div class="main">
+  <div id="wrapper">
+    <div id="drg-flyer" class="ui-widget-content flyer-element flyer-element-blank">
+      <div class="ui-resizable-handle ui-resizable-se segrip"></div>
+    </div>
+
+  </div>
+</div>
+
+<md-card id="right-nav" class="mdc-layout-grid right-nav">
+  <md-toolbar><span>Properties</span></md-toolbar>
+
+  <div class="input-props mdc-layout-grid">
+    <div class="mdc-layout-grid__cell--span-6">
+      <md-input-container class="md-icon-float">
+        <span class="icon-float-left"><i class="material-icons">more_vert</i></span>
+        <input id="x-coord" class="input-icon" mdInput placeholder="X (Pixels)">
+      </md-input-container>
+
+      <md-input-container class="">
+        <span class="icon-float-left"><i class="material-icons">more_vert</i></span>
+        <input id="input-element-width" class="input-icon" mdInput placeholder="Width">
+      </md-input-container>
+    </div>
+
+    <div class="mdc-layout-grid__cell--span-6">
+      <md-input-container class="">
+        <span class="icon-float-left"><i class="material-icons">more_vert</i></span>
+        <input id="y-coord" class="input-icon" mdInput placeholder="Y (Pixels)">
+      </md-input-container>
+
+      <md-input-container class="">
+        <span class="icon-float-left"><i class="material-icons">more_vert</i></span>
+        <input id="input-element-height" class="input-icon" mdInput placeholder="Height">
+      </md-input-container>
+    </div>
+
+  </div>
+
+  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 right-nav-container prop-outer-container ">
+    <div class="prop-inner-container">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 flyer-property">
+        <a id="background-image" (click)="openDialog()" md-button>
+          <i class="material-icons">photo</i> Set Background
+        </a>
+      </div>
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 text-property">
+        <a id="background-color" md-button>
+          <i class="material-icons">photo</i> Background Color
+        </a>
+      </div>
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 text-property">
+        <a id="font-color" md-button>
+          <i class="material-icons">photo</i> Font Size
+        </a>
+      </div>
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 still-property">
+        <a id="set-background" (click)="openDialog()" md-button>
+          <i class="material-icons">photo</i> Set Background
+        </a>
+      </div>
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 still-property">
+        <a id="remove-element" md-button>
+          <i class="material-icons">remove_circle</i> Remove Element
+        </a>
+      </div>
+
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 still-property">
+        <a id="set-ordinal" (click)="openOrdinalDialog()" md-button>
+          <i class="material-icons">format_list_numbered</i> Set Ordinal
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="mdc-layout-grid build-flyer-container">
+    <a md-button class="btn-build-flyer" routerLink="." title="Click To Build Flyer">
+      <i class="material-icons">check_circle</i> <span class="">Build Flyer</span>
+    </a>
+  </div>
+</md-card>
